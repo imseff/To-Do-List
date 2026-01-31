@@ -24,6 +24,9 @@ export default function Home() {
 
 
   function handleAddTask(){
+    if (!title || !content)
+      return
+
     const newTask: Task = {
       newTitle: title,
       newContent: content 
@@ -40,7 +43,7 @@ export default function Home() {
   return (
     <div className="flex justify-center w-screen h-screen text-black">
       <div className="w-full h-full max-w-[1440] flex flex-col justify-center items-center bg-rose-50">  
-        <div className="w-full max-w-[500] border-3 rounded-xl border-black p-3 h-[720]">
+        <div className="w-full max-w-[500] border-3 rounded-xl border-black p-3 h-[720] bg-white">
           <div className="flex flex-col mb-7">
             <div className="font-bold text-lg mb-2">Create New Item</div>
             <div className="flex flex-col gap-2 items-start">
